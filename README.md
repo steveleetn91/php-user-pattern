@@ -1,6 +1,9 @@
 # php-user-pattern
 User Pattern Of PHP
 # install composer 
-php composer.phar install
+
+<code>php composer.phar install</code>
+
 # Unit Test 
-./vendor/bin/phpunit test/UserTest.php
+
+<code>./vendor/bin/phpunit test/UserTest.php</code>
