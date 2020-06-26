@@ -19,7 +19,7 @@ class UserBuilder implements Builder {
             $this->model->set('age',UserAge::render($age));
         }
         public function setLevel($level){
-            $this->model->set('level',Level::render($level));
+            $this->model->set('level',UserLevel::render($level));
         }
         public function setLocation($location){
             $this->model->set('location',UserLocation::render($location));
