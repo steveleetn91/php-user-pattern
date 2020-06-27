@@ -2,4 +2,4 @@ language: php
 php:
   - 7.1.9
 script : 
-  - ./vendor/bin/phpunit test/UserTest.php  
+  - ./vendor/bin/phpunit ./test/UserTest.php  
