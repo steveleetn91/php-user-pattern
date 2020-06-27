@@ -1,4 +1,6 @@
 language: php
 php:
   - 7.1.9
-script : /home/travis/vendor/bin/phpunit /home/travis/test/UserTest.php  
+before_script:
+  - php composer.phar install
+script : ./vendor/bin/phpunit ./test/UserTest.php  
