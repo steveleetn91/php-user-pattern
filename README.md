@@ -5,9 +5,9 @@
 # Description
  This module will support create user with : name, age, location, level, todo. This module is Builder Pattern of PHP
  <code>
-     ( [name] => Hoang Lee [age] => 29 [location] => HCM, Viet Nam [todo] => {"post":{"update":true,"delete":false,"create":true,"view_all":false},"page":{"update":true,"delete":false,"create":true,"view_all":false},"setting":{"update":false,"create":false}} )
+     Array ( [name] => Hoang Lee [age] => 29 [location] => HCM, Viet Nam [level] => Technical Leader [todo] => { "post": { "update": true, "delete": true, "create": true, "view_all": true }, "page": { "update": true, "delete": true, "create": true, "view_all": true }, "setting": { "update": true, "create": true } } )
  </code>
- 
+
 # install composer 
 <code>php composer.phar install</code>
 
