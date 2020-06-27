@@ -1,4 +1,6 @@
 language: php
 php:
   - 7.1.9
-script : ./vendor/bin/phpunit ./test/UserTest.php  
+script : 
+  - ./vendor/bin/phpunit ./test/UserTest.php  
+  - php index.php
