@@ -1,6 +1,7 @@
 language: php
 php:
   - 7.1.9
+before_script: composer require atoum/atoum  
 script : 
-  - ./vendor/bin/phpunit ./test/UserTest.php  
+  - ./vendor/bin/atoum ./test/UserTest.php  
   - php index.php
