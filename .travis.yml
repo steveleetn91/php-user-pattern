@@ -1,1 +1,5 @@
 language: php
+install:
+  - php composer.phar install
+script : 
+  - ./vendor/bin/phpunit test/UserTest.php  
