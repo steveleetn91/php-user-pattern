@@ -4,5 +4,6 @@ interface Builder {
     public function setAge($age);
     public function setLevel($level);
     public function setLocation($location);
+    public function setTodo($role);
     public function build();
 }

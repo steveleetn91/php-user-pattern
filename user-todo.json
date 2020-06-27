@@ -1,0 +1,18 @@
+{
+    "post": {
+        "update": true,
+        "delete": false,
+        "create": true,
+        "view_all": false
+    },
+    "page": {
+        "update": true,
+        "delete": false,
+        "create": true,
+        "view_all": false
+    },
+    "setting": {
+        "update": false,
+        "create": false
+    }
+}
