@@ -2,5 +2,5 @@ language: php
 php:
   - 7.1.9
 before_script:
-  - php composer.phar install
+  - composer install
 script : ./vendor/bin/phpunit ./test/UserTest.php  
