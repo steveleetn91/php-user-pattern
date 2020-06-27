@@ -18,7 +18,6 @@
 # How to use ? 
 
 <code> 
- 
     require_once dirname(__FILE__) . '/UserBuilder.php';
     $builder = new UserBuilder;
     $builder->setName('Hoang Lee');
@@ -27,5 +26,5 @@
     $builder->setLevel('Technical Leader');
     $builder->setTodo('admin');
     $builder->build();
-
+    print_r($builder->data);
 </code>
