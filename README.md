@@ -1,4 +1,3 @@
-# CI 
 <a href="https://travis-ci.org/github/steveleetn91/php-user-pattern">
 <img src="https://travis-ci.org/steveleetn91/php-user-pattern.svg?branch=master">
 </a>
