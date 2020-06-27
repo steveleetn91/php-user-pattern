@@ -1,5 +1,5 @@
 language: php
-install:
-  - php composer.phar update
+php:
+  - 7.1.9
 script : 
   - ./vendor/bin/phpunit test/UserTest.php  
