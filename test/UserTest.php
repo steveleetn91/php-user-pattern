@@ -61,13 +61,6 @@ final class UserTest extends TestCase {
         $this->builder->build();
         $this->assertJsonStringEqualsJsonFile(dirname(__FILE__) . '/../user-todo.json',$this->builder->data['todo'],"Todo is not the same");
       }
-      public function testArrayResponse(){
-        $this->assertEmpty($this->builder->data['name'],"Name is empty");
-        $this->assertEmpty($this->builder->data['age'],"Age is empty");
-        $this->assertEmpty($this->builder->data['level'],"Level is empty");
-        $this->assertEmpty($this->builder->data['todo'],"Todo is empty");
-        $this->assertEmpty($this->builder->data['level'],"Level is empty");
-      }
       /**
        * Validate  Name
        */
