@@ -1,9 +1,9 @@
 <?php 
 interface Builder {
-    public function setName($name);
-    public function setAge($age);
-    public function setLevel($level);
-    public function setLocation($location);
-    public function setTodo($role);
-    public function build();
+    public function setName($name) : Builder;
+    public function setAge($age) : Builder;
+    public function setLevel($level) : Builder;
+    public function setLocation($location) : Builder;
+    public function setTodo($role) : Builder;
+    public function build() : array;
 }

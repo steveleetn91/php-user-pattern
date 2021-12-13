@@ -1,14 +1,20 @@
 <?php 
 try {
     require_once dirname(__FILE__) . '/UserBuilder.php';
-    $builder = new UserBuilder;
-    $builder->setName('Hoang Lee');
-    $builder->setAge(29);
-    $builder->setLocation('HCM, Viet Nam');
-    $builder->setLevel('Technical Leader');
-    $builder->setTodo('admin');
-    $builder->build();
-    print_r($builder->data);
+    $admin = $user = new UserBuilder;
+    $admin->setName('Hoang Lee')
+    ->setAge(29)
+    ->setLocation('HCM, Viet Nam')
+    ->setLevel('Technical Leader')
+    ->setTodo('admin');
+    print_r($admin->build());
+    print_r('<br/>-------- first build ------- <br/>');
+    $user->setName('Hoang Lee 2')
+    ->setAge(30)
+    ->setLocation('HCM, Viet Nam')
+    ->setLevel('Technical Leader 2')
+    ->setTodo('member');
+    print_r($admin->build());
 }catch(Exception $e) {
     print_r($e);
 }

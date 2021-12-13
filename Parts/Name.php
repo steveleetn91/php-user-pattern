@@ -1,6 +1,6 @@
 <?php 
 class UserName {
-    public static function main($name = ''){
+    public static function main($name = '') : string | \Exception {
         /**
          * Name empty 
          */
