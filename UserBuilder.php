@@ -10,34 +10,31 @@ require_once dirname(__FILE__) . '/Parts/Todo.php';
 class UserBuilder implements Builder {
         private $model;
         public $data;
-        public function __construct($model = null){
-            if($model === null) {
-                $this->model = new UserModel;
-            } else{
-                $this->model = $model;
-            }
+        public function __construct(){
+            $this->model = new UserModel;
         }
         public function setName($name) : Builder {
             $this->model->set('name',UserName::main($name));
-            return new UserBuilder($this->model);
+            return $this;
         }
         public function setAge($age) : Builder{
             $this->model->set('age',UserAge::main($age));
-            return new UserBuilder($this->model);
+            return $this;
         }
         public function setLevel($level) : Builder{
             $this->model->set('level',UserLevel::main($level));
-            return new UserBuilder($this->model);
+            return $this;
         }
         public function setLocation($location) : Builder{
             $this->model->set('location',UserLocation::main($location));
-            return new UserBuilder($this->model);
+            return $this;
         }
         public function setTodo($role = 'member') : Builder{
             $this->model->set('todo',UserTodo::main($role));
-            return new UserBuilder($this->model);
+            return $this;
         }
         public function build() : array{
+            $this->model->data['todo'] = json_decode($this->model->data['todo'],true);
             return $this->model->data;
         }
 }
