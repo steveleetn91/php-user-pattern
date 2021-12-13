@@ -17,8 +17,7 @@
 
 # How to use ? 
 
-<code> 
-    print_r('<br/>-------- First build ------- <br/>');
+    `print_r('<br/>-------- First build ------- <br/>');
     require_once dirname(__FILE__) . '/UserBuilder.php';
     $admin = $user = new UserBuilder;
     $admin->setName('Hoang Lee')
@@ -33,6 +32,4 @@
     ->setLocation('HCM, Viet Nam')
     ->setLevel('Technical Leader 2')
     ->setTodo('member');
-    print_r($admin->build());
-    
-</code>
+    print_r($admin->build());`
