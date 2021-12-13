@@ -18,15 +18,21 @@
 # How to use ? 
 
 <code> 
-
+    print_r('<br/>-------- First build ------- <br/>');
     require_once dirname(__FILE__) . '/UserBuilder.php';
-    $builder = new UserBuilder;
-    $builder->setName('Hoang Lee');
-    $builder->setAge(29);
-    $builder->setLocation('HCM, Viet Nam');
-    $builder->setLevel('Technical Leader');
-    $builder->setTodo('admin');
-    $builder->build();
-    print_r($builder->data);
+    $admin = $user = new UserBuilder;
+    $admin->setName('Hoang Lee')
+    ->setAge(29)
+    ->setLocation('HCM, Viet Nam')
+    ->setLevel('Technical Leader')
+    ->setTodo('admin');
+    print_r($admin->build());
+    print_r('<br/>-------- Next build ------- <br/>');
+    $user->setName('Hoang Lee 2')
+    ->setAge(30)
+    ->setLocation('HCM, Viet Nam')
+    ->setLevel('Technical Leader 2')
+    ->setTodo('member');
+    print_r($admin->build());
     
 </code>
