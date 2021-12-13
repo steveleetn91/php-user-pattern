@@ -3,7 +3,7 @@ try {
     require_once dirname(__FILE__) . '/UserBuilder.php';
     $admin = $user = new UserBuilder;
     $admin->setName('Hoang Lee')
-    ->setAge(29)
+    ->setAge(11)
     ->setLocation('HCM, Viet Nam')
     ->setLevel('Technical Leader')
     ->setTodo('admin');
@@ -15,6 +15,7 @@ try {
     ->setLevel('Technical Leader 2')
     ->setTodo('member');
     print_r($admin->build());
-}catch(Exception $e) {
+}catch(\Exception $e) {
+    echo "Debug<br/>";
     print_r($e);
 }

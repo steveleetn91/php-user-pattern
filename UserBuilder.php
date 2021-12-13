@@ -13,23 +13,23 @@ class UserBuilder implements Builder {
         public function __construct(){
             $this->model = new UserModel;
         }
-        public function setName($name) : Builder {
+        public function setName(string $name) : Builder{
             $this->model->set('name',UserName::main($name));
             return $this;
         }
-        public function setAge($age) : Builder{
+        public function setAge(int $age) : Builder{
             $this->model->set('age',UserAge::main($age));
             return $this;
         }
-        public function setLevel($level) : Builder{
+        public function setLevel(string $level) : Builder{
             $this->model->set('level',UserLevel::main($level));
             return $this;
         }
-        public function setLocation($location) : Builder{
+        public function setLocation(string $location) : Builder{
             $this->model->set('location',UserLocation::main($location));
             return $this;
         }
-        public function setTodo($role = 'member') : Builder{
+        public function setTodo(string $role = 'member') : Builder{
             $this->model->set('todo',UserTodo::main($role));
             return $this;
         }
