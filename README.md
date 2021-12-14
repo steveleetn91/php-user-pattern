@@ -4,9 +4,14 @@
 
 # Description
  This module will support create user with : name, age, location, level, todo. This module is Builder Pattern of PHP
- <code>
-     Array ( [name] => Hoang Lee [age] => 29 [location] => HCM, Viet Nam [level] => Technical Leader [todo] => { "post": { "update": true, "delete": true, "create": true, "view_all": true }, "page": { "update": true, "delete": true, "create": true, "view_all": true }, "setting": { "update": true, "create": true } } )
- </code>
+        <code>
+            -------- first build -------
+            Array ( [name] => Steve Lee [age] => 11 [location] => HCM, Viet Nam [level] => Technical Leader [todo] => Array ( [post] => Array ( [update] => 1 [delete] => 1 [create] => 1 [view_all] => 1 ) [page] => Array ( [update] => 1 [delete] => 1 [create] => 1 [view_all] => 1 ) [setting] => Array ( [update] => 1 [create] => 1 ) ) )
+            -------- next build -------
+            Array ( [name] => Steve Job [age] => 11 [location] => Silicon valley, US [level] => Technical Leader [todo] => Array ( [post] => Array ( [update] => 1 [delete] => [create] => 1 [view_all] => ) [page] => Array ( [update] => 1 [delete] => [create] => 1 [view_all] => ) [setting] => Array ( [update] => [create] => ) ) )
+            -------- next build -------
+            Array ( [name] => Bill gates [age] => 11 [location] => Silicon valley, US [level] => Technical Leader [todo] => Array ( [post] => Array ( [update] => 1 [delete] => [create] => 1 [view_all] => ) [page] => Array ( [update] => 1 [delete] => [create] => 1 [view_all] => ) [setting] => Array ( [update] => [create] => ) ) )
+        </code>
 
 # install composer 
 <code>php composer.phar install</code>
@@ -17,19 +22,27 @@
 
 # How to use ? 
 
-    `print_r('<br/>-------- First build ------- <br/>');
-    require_once dirname(__FILE__) . '/UserBuilder.php';
-    $admin = $user = new UserBuilder;
-    $admin->setName('Hoang Lee')
-    ->setAge(29)
-    ->setLocation('HCM, Viet Nam')
-    ->setLevel('Technical Leader')
-    ->setTodo('admin');
-    print_r($admin->build());
-    print_r('<br/>-------- Next build ------- <br/>');
-    $user->setName('Hoang Lee 2')
-    ->setAge(30)
-    ->setLocation('HCM, Viet Nam')
-    ->setLevel('Technical Leader 2')
-    ->setTodo('member');
-    print_r($admin->build());`
+        try {
+            require_once dirname(__FILE__) . '/UserBuilder.php';
+            $admin = new UserBuilder;
+            $admin->setName('Steve Lee')
+                ->setAge(11)
+                ->setLocation('HCM, Viet Nam')
+                ->setLevel('Technical Leader')
+                ->setTodo('admin');
+            print_r('<br/>-------- first build ------- <br/>');
+            print_r($admin->build());
+            print_r('<br/>-------- next build ------- <br/>');
+            $admin->setName('Steve Jobs')
+                ->setLocation('Silicon valley, US')
+                ->setTodo('member');
+            print_r($admin->build());
+            print_r('<br/>-------- next build ------- <br/>');
+            $admin->setName('Bill Gates')
+                ->setTodo('member');
+            print_r($admin->build());
+        } catch (\Exception $e) {
+            echo "Debug<br/>";
+            print_r($e);
+        }
+
