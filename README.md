@@ -4,14 +4,18 @@
 
 # Description
  This module will support create user with : name, age, location, level, todo. This module is Builder Pattern of PHP
-        <code>
+
             -------- first build -------
+
             Array ( [name] => Steve Lee [age] => 11 [location] => HCM, Viet Nam [level] => Technical Leader [todo] => Array ( [post] => Array ( [update] => 1 [delete] => 1 [create] => 1 [view_all] => 1 ) [page] => Array ( [update] => 1 [delete] => 1 [create] => 1 [view_all] => 1 ) [setting] => Array ( [update] => 1 [create] => 1 ) ) )
+
             -------- next build -------
+
             Array ( [name] => Steve Job [age] => 11 [location] => Silicon valley, US [level] => Technical Leader [todo] => Array ( [post] => Array ( [update] => 1 [delete] => [create] => 1 [view_all] => ) [page] => Array ( [update] => 1 [delete] => [create] => 1 [view_all] => ) [setting] => Array ( [update] => [create] => ) ) )
+
             -------- next build -------
+
             Array ( [name] => Bill gates [age] => 11 [location] => Silicon valley, US [level] => Technical Leader [todo] => Array ( [post] => Array ( [update] => 1 [delete] => [create] => 1 [view_all] => ) [page] => Array ( [update] => 1 [delete] => [create] => 1 [view_all] => ) [setting] => Array ( [update] => [create] => ) ) )
-        </code>
 
 # install composer 
 <code>php composer.phar install</code>
